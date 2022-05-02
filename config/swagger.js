@@ -175,7 +175,6 @@ const apiDoc = {
           {
             name: 'token',
             in: 'header',
-            required: true,
             description: 'jwt token',
             schema: {
               type: 'string',
@@ -259,7 +258,6 @@ const apiDoc = {
           {
             name: 'token',
             in: 'header',
-            required: true,
             description: 'jwt token',
             schema: {
               type: 'string',
