@@ -172,15 +172,15 @@ const apiDoc = {
               type: 'string',
             },
           },
-          {
-            name: 'token',
-            in: 'header',
-            required: true,
-            description: 'jwt token',
-            schema: {
-              type: 'string',
-            },
-          },
+          // {
+          //   name: 'token',
+          //   in: 'header',
+          //   required: true,
+          //   description: 'jwt token',
+          //   schema: {
+          //     type: 'string',
+          //   },
+          // },
         ],
         // API要傳給後端的資料
         requestBody: {
