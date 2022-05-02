@@ -2,7 +2,7 @@
 // https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#specification
 
 const apiDoc = {
-  openapi: '3.0.1',
+  openapi: '3.0.3',
   info: {
     version: '1.0',
     title: 'mongoose 會員系統',
