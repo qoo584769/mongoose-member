@@ -18,9 +18,6 @@ const apiDoc = {
       description: 'heroku server',
     }
   ],
-  security:{
-    bearerAuth:[]
-  },
   tags: [{ name: '會員API', description: '會員系統非RESTful API' }],
   consumes: ['application/json'],
   produces: ['application/json'],
@@ -413,11 +410,11 @@ const apiDoc = {
       },
     },
     securitySchemes: {
-      api_key: {
-        type: 'apiKey',
-        name: 'api_key',
-        in: 'header',
-      },
+      // api_key: {
+      //   type: 'apiKey',
+      //   name: 'api_key',
+      //   in: 'header',
+      // },
       bearerAuth: {
         type: 'http',
         scheme: 'bearer',
