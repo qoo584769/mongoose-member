@@ -13,6 +13,10 @@ const apiDoc = {
       url: 'http://localhost:3000/',
       description: 'Local server',
     },
+    {
+      url:'https://mongoose-member.herokuapp.com/',
+      description: 'heroku server',
+    }
   ],
   tags: [{ name: '會員API', description: '會員系統非RESTful API' }],
   consumes: ['application/json'],
@@ -25,16 +29,6 @@ const apiDoc = {
         tags: ['會員API'],
         // API簡介
         summary: '登入用',
-        // API要傳給後端的資料
-        // parameters:{
-        //   description: '參數',
-        //   required: true,
-        //   in:'body',
-        //   name:'req body',
-        //   schema: {
-        //     $ref: '#/components/schemas/loginModel',
-        //   },
-        // },
         requestBody: {
           description: '參數',
           required: true,

@@ -39,7 +39,7 @@ app.use(
 const options = {
   explorer: true
 };
-
+// 本地端cors
 // app.use((req,res,next)=>{
 //   res.set('Access-Control-Allow-Headers',
 //   'Content-Type, Authorization, Content-Length, X-Requested-With')
