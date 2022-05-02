@@ -41,7 +41,7 @@ const mongooseUserLogin = async (req, res) => {
         res,
         result.status,
         result.status,
-        result.result,
+        result,
         result.message
       );
     } else if (result.status === 404) {

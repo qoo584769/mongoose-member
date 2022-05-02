@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "d6dd1ebe-6efd-409b-ae9c-ef64e34f526e",
+		"name": "mongoose member system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"john12345@gmail.com\",\r\n    \"password\":\"john12345\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mongoose-member.herokuapp.com/user/login",
+					"protocol": "https",
+					"host": [
+						"mongoose-member",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"john12345\",\r\n    \"email\":\"john12345@gmail.com\",\r\n    \"password\":\"john12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mongoose-member.herokuapp.com/user/signup",
+					"protocol": "https",
+					"host": [
+						"mongoose-member",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGdvcml0aG0iOiJIUzI1NiIsImV4cCI6MTY1MTQwODQ0NCwiZGF0YSI6IjYyNmQ0YTcxNmQ1NWUyNjQ3ZTIyYWFkYiIsImlhdCI6MTY1MTQwNDg0NH0.eJ3K9alleKBEheAq3T8eFJjnWeFpo7J2T8vnXN7e8JE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"john456\",\r\n    \"email\":\"john456@gmail.com\",\r\n    \"password\":\"john456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mongoose-member.herokuapp.com/user/edit/626d4a716d55e2647e22aadb",
+					"protocol": "https",
+					"host": [
+						"mongoose-member",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"edit",
+						"626d4a716d55e2647e22aadb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGdvcml0aG0iOiJIUzI1NiIsImV4cCI6MTY1MTQwODkwMSwiZGF0YSI6IjYyNmU2ZTQ5MDA0YmIwNjU0ZTEzZGE2ZCIsImlhdCI6MTY1MTQwNTMwMX0.NpORVEkaJH0U9fTyVob3rkw5tJoE3IH1k57Vdt_n6f0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://mongoose-member.herokuapp.com/user/delete/626e6e49004bb0654e13da6d",
+					"protocol": "https",
+					"host": [
+						"mongoose-member",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"delete",
+						"626e6e49004bb0654e13da6d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
