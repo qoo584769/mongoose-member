@@ -159,7 +159,7 @@ const apiDoc = {
         // API簡介
         summary: '編輯會員資料',
         security:{
-          bearerAuth:[]
+          Bearer:{}
         },
         // 帶入參數的方式
         parameters: [
@@ -172,15 +172,15 @@ const apiDoc = {
               type: 'string',
             },
           },
-          // {
-          //   name: 'token',
-          //   in: 'header',
-          //   required: true,
-          //   description: 'jwt token',
-          //   schema: {
-          //     type: 'string',
-          //   },
-          // },
+          {
+            name: 'token',
+            in: 'header',
+            required: true,
+            description: 'jwt token',
+            schema: {
+              type: 'string',
+            },
+          },
         ],
         // API要傳給後端的資料
         requestBody: {
@@ -211,6 +211,31 @@ const apiDoc = {
               },
             },
           },
+          404:{
+            description: 'Error: Not Found',
+            // 回傳內容
+            content: {
+              // 回傳內容格式
+              'application/json': {
+                // 回傳的資料格式
+                schema: {
+                  type: 'object',
+                  properties: {
+                    status: {
+                      type: 'integer',
+                      default: 404,
+                    },
+                    data: {
+                      type: 'string',
+                    },
+                    message: {
+                      type: 'string',
+                    },
+                  },
+                },
+              },
+            },
+          }
         },
       },
     },
@@ -221,7 +246,7 @@ const apiDoc = {
         // API簡介
         summary: '刪除單個會員',
         security:{
-          bearerAuth:[]
+          Bearer:{}
         },
         // 帶入參數的方式
         parameters: [
@@ -230,6 +255,15 @@ const apiDoc = {
             in: 'path',
             required: true,
             description: '要刪除的會員ID',
+          },
+          {
+            name: 'token',
+            in: 'header',
+            required: true,
+            description: 'jwt token',
+            schema: {
+              type: 'string',
+            },
           },
         ],
         produces: ['application/json'],
@@ -386,6 +420,8 @@ const apiDoc = {
       bearerAuth: {
         type: 'http',
         scheme: 'bearer',
+        name:'JWT token',
+        in:'header',
         bearerFormat: 'JWT',
       },
     },
