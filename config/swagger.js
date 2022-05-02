@@ -18,6 +18,9 @@ const apiDoc = {
       description: 'heroku server',
     }
   ],
+  security:{
+    bearerAuth:[]
+  },
   tags: [{ name: '會員API', description: '會員系統非RESTful API' }],
   consumes: ['application/json'],
   produces: ['application/json'],
