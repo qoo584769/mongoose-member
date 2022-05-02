@@ -159,7 +159,7 @@ const apiDoc = {
         // API簡介
         summary: '編輯會員資料',
         security:{
-          Bearer:{}
+          api_key:[]
         },
         // 帶入參數的方式
         parameters: [
@@ -245,7 +245,7 @@ const apiDoc = {
         // API簡介
         summary: '刪除單個會員',
         security:{
-          Bearer:{}
+          api_key:[]
         },
         // 帶入參數的方式
         parameters: [
@@ -412,7 +412,7 @@ const apiDoc = {
     securitySchemes: {
       api_key: {
         type: 'apiKey',
-        name: 'api_key',
+        name: 'Authorization',
         in: 'header',
       },
       bearerAuth: {
