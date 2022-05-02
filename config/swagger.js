@@ -301,11 +301,6 @@ const apiDoc = {
           password: {
             type: 'string',
           },
-          createAt: {
-            type: 'string',
-            format: 'date-time',
-            default: 'Date.now',
-          },
         },
       },
       signupResModel: {
