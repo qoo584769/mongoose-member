@@ -158,9 +158,7 @@ const apiDoc = {
         tags: ['會員API'],
         // API簡介
         summary: '編輯會員資料',
-        security:{
-          api_key:[]
-        },
+        
         // 帶入參數的方式
         parameters: [
           {
@@ -236,6 +234,9 @@ const apiDoc = {
             },
           }
         },
+        security:{
+          api_key:[]
+        },
       },
     },
     '/user/delete/{id}': {
@@ -243,10 +244,7 @@ const apiDoc = {
         // API分類 一樣的會放在同一個框
         tags: ['會員API'],
         // API簡介
-        summary: '刪除單個會員',
-        security:{
-          api_key:[]
-        },
+        summary: '刪除單個會員',        
         // 帶入參數的方式
         parameters: [
           {
@@ -280,6 +278,9 @@ const apiDoc = {
               },
             },
           },
+        },
+        security:{
+          api_key:[]
         },
       },
     },
