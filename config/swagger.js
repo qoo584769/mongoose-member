@@ -418,7 +418,7 @@ const apiDoc = {
       bearerAuth: {
         type: 'http',
         scheme: 'bearer',
-        name:'JWT token',
+        name:'token',
         in:'header',
         bearerFormat: 'JWT',
       },
